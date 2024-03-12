@@ -720,15 +720,16 @@ body {
   + .contacts-form-checkbox-label
   .contacts-form-own-checkbox {
   background-color: #404bbf;
+  border-color: #404bbf;
   fill: #f4f4fd;
   border: none;
 }
 
-.contacts-form-privacy-checkbox:focus
+/* .contacts-form-privacy-checkbox:focus
   + .contacts-form-checkbox-label
   .contacts-form-own-checkbox {
   border: 1px solid #4d5ae5;
-}
+} */
 
 .privacy-policy-link {
   line-height: 1.33;
