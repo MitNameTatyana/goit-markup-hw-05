@@ -604,13 +604,15 @@
         </div>
         <div class="footer-third-column">
           <p class="footer-third-column-text">Subscribe</p>
-          <div class="footer-subscribe">
-            <input
-              class="footer-input"
-              type="email"
-              name="subscribe-email"
-              placeholder="E-mail"
-            />
+          <form class="subscribe-form">
+            <label class="subscribe-form-field-label">
+              <input
+                class="footer-input"
+                type="email"
+                name="subscribe-email"
+                placeholder="E-mail"
+              />
+            </label>
             <button class="footer-subscribe-btn" type="submit">
               Subscribe
               <svg
@@ -622,7 +624,7 @@
                 <use href="./images/icons.svg#icon-telegram"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
@@ -632,8 +634,8 @@
         <button class="modal-close-btn" type="button">
           <svg
             class="modal-close-btn-icon"
-            width="8px"
-            height="8px"
+            width="8"
+            height="8"
             aria-label="close icon"
           >
             <use href="./images/icons.svg#icon-close"></use>
@@ -657,7 +659,7 @@
                 title="Petro"
                 required
               />
-              <svg class="contacts-form-field-icon" width="18" height="18">
+              <svg class="contacts-form-field-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-user-avatar"></use>
               </svg>
             </div>
@@ -676,7 +678,7 @@
                 title="xxx-xxx-xx-xx"
                 required
               />
-              <svg class="contacts-form-field-icon" width="18" height="18">
+              <svg class="contacts-form-field-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
@@ -693,7 +695,7 @@
                 id="user-email"
                 required
               />
-              <svg class="contacts-form-field-icon" width="18" height="18">
+              <svg class="contacts-form-field-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
@@ -714,12 +716,12 @@
             <input
               class="contacts-form-privacy-checkbox visually-hidden"
               type="checkbox"
-              name="privacy-policy"
-              id="privacy-policy"
+              name="user-privacy"
+              id="user-privacy"
               value="true"
               required
             />
-            <label for="privacy-policy" class="contacts-form-checkbox-label">
+            <label for="user-privacy" class="contacts-form-checkbox-label">
               <span class="contacts-form-own-checkbox">
                 <svg
                   class="contacts-form-own-checkbox-icon"

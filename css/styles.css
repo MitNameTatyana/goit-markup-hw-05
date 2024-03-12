@@ -481,11 +481,6 @@ body {
   fill: #f4f4fd;
 }
 
-.footer-subscribe {
-  display: flex;
-  gap: 24px;
-}
-
 .footer-third-column-text {
   font-weight: 500;
   font-size: 16px;
@@ -493,6 +488,11 @@ body {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
 }
 
 .footer-input {
@@ -506,7 +506,9 @@ body {
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  padding: 8px 16px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .footer-input:focus {
@@ -519,22 +521,26 @@ body {
 
 .footer-subscribe-btn {
   min-width: 165px;
+  height: 40px;
   border: none;
   border-radius: 4px;
   padding: 8px 24px;
   background: #4d5ae5;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
+  cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .footer-telegram-icon {
   fill: #ffffff;
+  margin-left: 16px;
 }
 
 .backdrop {
@@ -544,7 +550,7 @@ body {
   z-index: 99999999;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
   visibility: hidden;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -558,6 +564,7 @@ body {
 
 .modal {
   width: 408px;
+  min-height: 584px;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -566,6 +573,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-top: 72px;
   padding-bottom: 24px;
   padding-left: 24px;
@@ -573,25 +581,33 @@ body {
 }
 
 .modal-close-btn {
-  fill: #2e2f42;
   width: 24px;
   height: 24px;
   padding: 0;
   line-height: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #e7e9fc;
   position: absolute;
   top: 24px;
   right: 24px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #2e2f42;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  fill: #ffffff;
+  border: none;
   background-color: #404bbf;
+  fill: #ffffff;
+}
+
+.modal-close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-form-description {
@@ -605,7 +621,7 @@ body {
 }
 
 .contacts-form-field-wrapper {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .contacts-form-field-label {
@@ -627,13 +643,13 @@ body {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
+  outline: transparent;
   padding-left: 38px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-form-input:focus {
   border-color: #4d5ae5;
-  outline: transparent;
 }
 
 .contacts-form-field-icon {
@@ -658,19 +674,15 @@ body {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
+  outline: transparent;
+  color: rgba(46, 47, 66, 0.4);
   resize: none;
   padding: 8px 16px;
-  margin-bottom: 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts-form-comment::placeholder {
-  color: rgba(46, 47, 66, 0.4);
 }
 
 .contacts-form-comment:focus {
   border-color: #4d5ae5;
-  outline: transparent;
 }
 
 .contacts-form-checkbox-wrapper {
@@ -679,7 +691,7 @@ body {
 
 .contacts-form-checkbox-label {
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -695,14 +707,18 @@ body {
   cursor: pointer;
   fill: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-form-privacy-checkbox:checked
   + .contacts-form-checkbox-label
   .contacts-form-own-checkbox {
   background-color: #404bbf;
-  fill: #f4f4fd;
   border-color: #404bbf;
+  fill: #f4f4fd;
+  border: none;
 }
 
 .contacts-form-privacy-checkbox:focus
@@ -734,4 +750,10 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-form-submit-btn:hover,
+.contacts-form-submit-btn:focus {
+  background-color: #404bbf;
 }
