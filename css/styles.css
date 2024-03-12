@@ -621,6 +621,10 @@ body {
 }
 
 .contacts-form-field-wrapper {
+  margin-bottom: 8px;
+}
+
+.contacts-form-field-wrapper:nth-child(4) {
   margin-bottom: 16px;
 }
 
@@ -716,7 +720,6 @@ body {
   + .contacts-form-checkbox-label
   .contacts-form-own-checkbox {
   background-color: #404bbf;
-  border-color: #404bbf;
   fill: #f4f4fd;
   border: none;
 }
